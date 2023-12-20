@@ -9,6 +9,10 @@ jobs:
     steps:
       - name: Clean up workspace
         run: rm -rf *
+      - uses: actions/checkout@v4
+        name: Checkout repository
+        with:
+          submodules: true
       - uses: robinraju/release-downloader@v1.8
         name: Download PythonAPI
         with:
