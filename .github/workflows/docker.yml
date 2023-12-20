@@ -35,5 +35,6 @@ jobs:
           image-tag: ros2
           enable-singlearch-push: true
           enable-push-as-latest: true
+          enable-checkout: false
       - name: Debug 2
         run: tree -L 3
