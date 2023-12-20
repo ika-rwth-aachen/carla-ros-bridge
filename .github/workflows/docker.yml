@@ -11,7 +11,19 @@ jobs:
         platform: [amd64]
     runs-on: self-hosted
     steps:
+      - uses: robinraju/release-downloader@v1.8
+        name: Download PythonAPI
+        with:
+          repository: carla-compose/carla
+          latest: true
+          fileName: PythonAPI.tar.gz
+          tarBall: true
+          extract: true
+          out-file-path: docker/additional-files
+      - name: Debug 1
+        run: tree -L 3
       - uses: ika-rwth-aachen/docker-ros@v1.3.1
+        name: Run docker-ros pipeline
         with:
           base-image: rwthika/ros2:humble
           command: ros2 launch carla_ros_bridge carla_ros_bridge.launch.py
@@ -24,3 +36,5 @@ jobs:
           image-tag: ros2
           enable-singlearch-push: true
           enable-push-as-latest: true
+      - name: Debug 2
+        run: tree -L 3
