@@ -9,7 +9,7 @@ jobs:
       matrix:
         target: [dev, run]
         platform: [amd64]
-    runs-on: self-hosted
+    runs-on: i2100038
     steps:
       - uses: robinraju/release-downloader@v1.8
         name: Download PythonAPI
@@ -17,7 +17,6 @@ jobs:
           repository: carla-compose/carla
           latest: true
           fileName: PythonAPI.tar.gz
-          tarBall: true
           extract: true
           out-file-path: docker/additional-files
       - name: Debug 1
