@@ -5,10 +5,6 @@ on: [push, pull_request]
 jobs:
 
   docker-ros:
-    strategy:
-      matrix:
-        target: [dev, run]
-        platform: [amd64]
     runs-on: i2100038
     steps:
       - name: Clean up workspace
@@ -21,6 +17,8 @@ jobs:
           fileName: PythonAPI.tar.gz
           extract: true
           out-file-path: docker/additional-files
+      - name: Remove PythonAPI.tar.gz
+        run: rm docker/additional-files/PythonAPI.tar.gz
       - name: Debug 1
         run: tree -L 3
       - uses: BenediktHaas96/docker-ros@feature/checkout-configuration
@@ -28,8 +26,8 @@ jobs:
         with:
           base-image: rwthika/ros2:humble
           command: ros2 launch carla_ros_bridge carla_ros_bridge.launch.py
-          target: ${{ matrix.target }}
-          platform: ${{ matrix.platform }}
+          target: run
+          platform: amd64
           registry: docker.io
           registry-user: ${{ secrets.DOCKER_USERNAME }}
           registry-password: ${{ secrets.DOCKER_PASSWORD }}
