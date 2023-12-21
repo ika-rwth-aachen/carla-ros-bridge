@@ -1,4 +1,19 @@
-# ROS/ROS2 bridge for CARLA simulator
+# Communication Module: *carla-ros-bridge*
+
+<p align="center"><img src="https://img.shields.io/github/v/release/carla-compose/carla-ros-bridge"/>
+  <img src="https://img.shields.io/github/v/release/carla-compose/carla-ros-bridge"/></a>
+  <img src="https://img.shields.io/github/license/carla-compose/carla-ros-bridge"/>
+  <a href="https://github.com/carla-compose/carla-ros-bridge/actions/workflows/docker.yml"><img src="https://github.com/carla-compose/carla-ros-bridge/actions/workflows/docker.yml/badge.svg"/></a>
+  <img src="https://img.shields.io/badge/ROS 2-humble-blueviolet"/>
+  <img src="https://img.shields.io/github/stars/carla-compose/carla-ros-bridge?style=social"/>
+</p>
+
+We recommend to use the *carla-ros-bridge* as **communication module** within our proposed simulation framework <a href="https://github.com/carla-compose/carla-compose">carla-compose. <img src="https://img.shields.io/github/stars/carla-compose/carla-compose?style=social"/></a>
+
+
+---
+---
+## Original README
 
 [![Actions Status](https://github.com/carla-simulator/ros-bridge/workflows/CI/badge.svg)](https://github.com/carla-simulator/ros-bridge)
 [![Documentation](https://readthedocs.org/projects/carla/badge/?version=latest)](http://carla.readthedocs.io)
