@@ -8,7 +8,8 @@
   <img src="https://img.shields.io/github/stars/carla-compose/carla-ros-bridge?style=social"/>
 </p>
 
-We recommend to use the *carla-ros-bridge* as **communication module** within our proposed simulation framework <a href="https://github.com/carla-compose/carla-compose"><img src="https://img.shields.io/github/stars/carla-compose/carla-compose?style=social"/></a>.
+We recommend to use the *carla-ros-bridge* as **communication module** within our proposed simulation framework <a href="https://github.com/carla-compose/carla-compose">carla-compose. <img src="https://img.shields.io/github/stars/carla-compose/carla-compose?style=social"/></a>
+
 
 ---
 ---
