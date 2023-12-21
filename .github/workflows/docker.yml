@@ -24,7 +24,7 @@ jobs:
       - uses: robinraju/release-downloader@v1.8
         name: Download PythonAPI
         with:
-          repository: carla-compose/carla
+          repository: carla-compose/carla-simulator
           latest: true
           fileName: PythonAPI.tar.gz
           extract: true
