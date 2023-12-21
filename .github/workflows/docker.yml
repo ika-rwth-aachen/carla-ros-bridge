@@ -48,11 +48,3 @@ jobs:
           enable-singlearch-push: true
           enable-push-as-latest: true
           enable-checkout: false
-
-      - uses: ncipollo/release-action@v1
-        name: Create Release
-        if: startsWith(github.ref, 'refs/tags')
-        with:
-          allowUpdates: true
-          tag: ${{ github.ref_name }}
-          commit: ${{ github.sha }}
