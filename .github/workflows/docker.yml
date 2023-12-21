@@ -3,16 +3,24 @@ name: Docker
 on: [push, pull_request]
 
 jobs:
-
-  docker-ros:
-    runs-on: i2100038
+  
+  clean-up:
+    name: Clean up
+    runs-on: self-hosted
     steps:
-      - name: Clean up workspace
+
+      - name: Clean up
         run: rm -rf *
+        
+  docker-ros:
+    runs-on: self-hosted
+    steps:
+      
       - uses: actions/checkout@v4
         name: Checkout repository
         with:
           submodules: true
+          
       - uses: robinraju/release-downloader@v1.8
         name: Download PythonAPI
         with:
@@ -21,11 +29,11 @@ jobs:
           fileName: PythonAPI.tar.gz
           extract: true
           out-file-path: docker/additional-files
+          
       - name: Remove PythonAPI.tar.gz
         run: rm docker/additional-files/PythonAPI.tar.gz
-      - name: Debug 1
-        run: tree -L 3
-      - uses: BenediktHaas96/docker-ros@feature/checkout-configuration
+        
+      - uses: BenediktHaas96/docker-ros@feature/checkout-configuration # TODO change back
         name: Run docker-ros pipeline
         with:
           base-image: rwthika/ros2:humble
@@ -40,5 +48,11 @@ jobs:
           enable-singlearch-push: true
           enable-push-as-latest: true
           enable-checkout: false
-      - name: Debug 2
-        run: tree -L 3
+
+      - uses: ncipollo/release-action@v1
+        name: Create Release
+        if: startsWith(github.ref, 'refs/tags')
+        with:
+          allowUpdates: true
+          tag: ${{ github.ref_name }}
+          commit: ${{ github.sha }}
