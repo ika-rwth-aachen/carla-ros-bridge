@@ -43,7 +43,7 @@ jobs:
           registry: docker.io
           registry-user: ${{ secrets.DOCKER_USERNAME }}
           registry-password: ${{ secrets.DOCKER_PASSWORD }}
-          image-name: cgellerac/ros-bridge
+          image-name: cgellerac/carla-ros-bridge
           image-tag: ros2
           enable-singlearch-push: true
           enable-push-as-latest: true
