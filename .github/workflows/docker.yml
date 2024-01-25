@@ -6,19 +6,21 @@ jobs:
   
   clean-up:
     name: Clean up
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
 
       - name: Clean up
         run: rm -rf *
         
   docker-ros:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
+    needs: clean-up
     steps:
       
       - uses: actions/checkout@v4
         name: Checkout repository
         with:
+          path: carla-ros-bridge
           submodules: true
           
       - uses: robinraju/release-downloader@v1.8
@@ -33,7 +35,7 @@ jobs:
       - name: Remove PythonAPI.tar.gz
         run: rm docker/additional-files/PythonAPI.tar.gz
         
-      - uses: BenediktHaas96/docker-ros@feature/checkout-configuration # TODO change back
+      - uses: docker-ros
         name: Run docker-ros pipeline
         with:
           base-image: rwthika/ros2:humble
