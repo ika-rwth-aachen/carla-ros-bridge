@@ -15,8 +15,8 @@ fi
 apt-get install --no-install-recommends -y $ADDITIONAL_PACKAGES
 # Check if user provided CARLA PythonAPI. If not, download it as artifact from CARLA CI pipeline
 mkdir -p /opt/carla
-if [ -d "$DOCKER_ROS_FILES_PATH/PythonAPI" ]; then
-    mv $DOCKER_ROS_FILES_PATH/PythonAPI /opt/carla/PythonAPI
+if [ -d "$DOCKER_ROS_FILES_PATH/artifacts/PythonAPI" ]; then
+    mv $DOCKER_ROS_FILES_PATH/artifacts/PythonAPI /opt/carla/PythonAPI
 else
     mkdir -p /opt/carla
     # TODO : UPDATE ARTIFACT RETRIEVAL
