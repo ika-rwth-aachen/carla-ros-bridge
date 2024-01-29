@@ -2,7 +2,7 @@ pep8
 autopep8
 cmake_format==0.6.11
 pylint
-transforms3d
+transforms3d==0.4.1
 pygame
 pexpect
 simple-pid

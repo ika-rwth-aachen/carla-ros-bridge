@@ -1,18 +1,16 @@
-# ROS-Bridge
+# Containerization of the carla-ros-bridge
 
-This repository aims to provide standalone images of the [CARLA ROS Bridge](https://gitlab.ika.rwth-aachen.de/fb-fi/simulation/carla/ros-bridge) fork by **ika** for usage in CI pipelines, cluster deployments etc. by utilizing [docker-ros](https://gitlab.ika.rwth-aachen.de/fb-fi/ops/docker-ros).
-
-- [Nodes](#nodes)
-  - [carla_ros_bridge/bridge.py](#carla_ros_bridgebridgepy)
-- [Usage of docker-ros Images](#usage-of-docker-ros-images)
-  - [Available Images](#available-images)
-  - [Default Command](#default-command)
-  - [Environment Variables](#environment-variables)
-  - [Launch Files](#launch-files)
-  - [Configuration Files](#configuration-files)
-  - [Additional Remarks](#additional-remarks)
-- [Official Documentation](#official-documentation)
-
+- [ROS-Bridge](#ros-bridge)
+  - [Nodes](#nodes)
+    - [carla\_ros\_bridge/bridge.py](#carla_ros_bridgebridgepy)
+      - [Subscribed Topics](#subscribed-topics)
+      - [Published Topics](#published-topics)
+      - [Services](#services)
+  - [Usage of docker-ros Images](#usage-of-docker-ros-images)
+    - [Available Images](#available-images)
+    - [Default Command](#default-command)
+    - [Launch Files](#launch-files)
+  - [Official Documentation](#official-documentation)
 
 ## Nodes
 
@@ -21,8 +19,6 @@ This repository aims to provide standalone images of the [CARLA ROS Bridge](http
 | `carla_ros_bridge` | `bridge.py` | Enables two-way communication between ROS and CARLA via ROS topics and commands applied to the CARLA server |
 
 ### carla_ros_bridge/bridge.py
-
-This node, besides other components, comes from the ika fork of the [ros-bridge](https://gitlab.ika.rwth-aachen.de/fb-fi/simulation/carla/ros-bridge).
 
 Also see the [official documentation](https://carla.readthedocs.io/projects/ros-bridge/en/latest/)
 
