@@ -20,7 +20,6 @@ jobs:
       - uses: actions/checkout@v4
         name: Checkout repository
         with:
-          path: carla-ros-bridge
           submodules: true
           
       - uses: robinraju/release-downloader@v1.8
