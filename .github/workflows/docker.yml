@@ -6,14 +6,14 @@ jobs:
   
   clean-up:
     name: Clean up
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
 
       - name: Clean up
         run: rm -rf *
         
   docker-ros:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     needs: clean-up
     steps:
       
@@ -34,7 +34,7 @@ jobs:
       - name: Remove PythonAPI.tar.gz
         run: rm docker/additional-files/PythonAPI.tar.gz
         
-      - uses: BenediktHaas96/docker-ros@feature/checkout-configuration #ika-rwth-aachen/docker-ros@main   # @v1.4.0 
+      - uses: ika-rwth-aachen/docker-ros@main   # @v1.4.0 
         name: Run docker-ros pipeline
         with:
           base-image: rwthika/ros2:humble
