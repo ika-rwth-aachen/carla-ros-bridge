@@ -6,14 +6,14 @@ jobs:
   
   clean-up:
     name: Clean up
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
 
       - name: Clean up
         run: rm -rf *
         
   docker-ros:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: clean-up
     steps:
       
