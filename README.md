@@ -11,7 +11,7 @@
 </p>
 
 > [!IMPORTANT]
-> This repository is a minimal fork of the official [ros-bridge](https://github.com/carla-simulator/ros-bridge)! All modifications to the original repository are documented in [FEATURES.md](./FEATURES.md).
+> This repository is a minimal fork of the official [ros-bridge](https://github.com/carla-simulator/ros-bridge)! All initial and following modifications to the original repository are documented in [CARLOS_CHANGELOG.md](./CARLOS_CHANGELOG.md).
 
 > [!TIP]
 > We recommend to use the *carla-ros-bridge* as **communication actor** in our open, modular and scalable simulation framework <a href="https://github.com/ika-rwth-aachen/carlos">**CARLOS**. <img src="https://img.shields.io/github/stars/ika-rwth-aachen/carlos?style=social"/></a> 
