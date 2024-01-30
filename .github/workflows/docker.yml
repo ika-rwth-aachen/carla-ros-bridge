@@ -12,11 +12,19 @@ jobs:
       - name: Clean up
         run: rm -rf *
         
-  prerequisites:
+  docker-ros:
+    strategy:
+      matrix:
+        include:
+          - ros: ros2
+            rosdistro: humble
+            command: ros2 launch carla_ros_bridge carla_ros_bridge.launch.py
+          - ros: ros
+            rosdistro: noetic
+            command: roslaunch carla_ros_bridge carla_ros_bridge.launch
     runs-on: ubuntu-latest
     needs: clean-up
     steps:
-      
       - uses: actions/checkout@v4
         name: Checkout repository
         with:
@@ -34,19 +42,6 @@ jobs:
       - name: Remove PythonAPI.tar.gz
         run: rm docker/additional-files/PythonAPI.tar.gz
 
-  docker-ros:
-    strategy:
-      matrix:
-        include:
-          - ros: ros2
-            rosdistro: humble
-            command: ros2 launch carla_ros_bridge carla_ros_bridge.launch.py
-          - ros: ros
-            rosdistro: noetic
-            command: roslaunch carla_ros_bridge carla_ros_bridge.launch
-    runs-on: ubuntu-latest
-    needs: prerequisites
-    steps:
       - uses: ika-rwth-aachen/docker-ros@main   # fix to @v1.4.0 when released
         name: Run docker-ros pipeline for ${{ matrix.ros }}:${{ matrix.rosdistro }}
         with:
