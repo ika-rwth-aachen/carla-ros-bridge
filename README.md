@@ -1,15 +1,28 @@
-# Communication Module: *carla-ros-bridge*
+# Communication Actor: *carla-ros-bridge*
 
-<p align="center"><img src="https://img.shields.io/github/v/release/carla-compose/carla-ros-bridge"/>
-  <img src="https://img.shields.io/github/v/release/carla-compose/carla-ros-bridge"/></a>
-  <img src="https://img.shields.io/github/license/carla-compose/carla-ros-bridge"/>
-  <a href="https://github.com/carla-compose/carla-ros-bridge/actions/workflows/docker.yml"><img src="https://github.com/carla-compose/carla-ros-bridge/actions/workflows/docker.yml/badge.svg"/></a>
+<p align="left">
+  <img src="https://img.shields.io/github/v/release/ika-rwth-aachen/carla-ros-bridge"/>
+  <img src="https://img.shields.io/github/license/ika-rwth-aachen/carla-ros-bridge"/>
+  <a href="https://github.com/ika-rwth-aachen/carla-ros-bridge/actions/workflows/docker.yml">
+  <img src="https://github.com/ika-rwth-aachen/carla-ros-bridge/actions/workflows/docker.yml/badge.svg"/></a>
   <img src="https://img.shields.io/badge/ROS 2-humble-blueviolet"/>
-  <img src="https://img.shields.io/github/stars/carla-compose/carla-ros-bridge?style=social"/>
+  <img src="https://img.shields.io/badge/Python-3.10-blueviolet"/>
+  <img src="https://img.shields.io/github/stars/ika-rwth-aachen/carla-ros-bridge?style=social"/>
 </p>
 
-We recommend to use the *carla-ros-bridge* as **communication module** within our proposed simulation framework <a href="https://github.com/carla-compose/carla-compose">carla-compose. <img src="https://img.shields.io/github/stars/carla-compose/carla-compose?style=social"/></a>
+> [!IMPORTANT]
+> This repository is a minimal fork of the official [ros-bridge](https://github.com/carla-simulator/ros-bridge)! All initial and following modifications to the original repository are documented in [CARLOS_CHANGELOG.md](./CARLOS_CHANGELOG.md).
 
+> [!TIP]
+> We recommend to use the *carla-ros-bridge* as **communication actor** in our open, modular and scalable simulation framework <a href="https://github.com/ika-rwth-aachen/carlos">**CARLOS**. <img src="https://img.shields.io/github/stars/ika-rwth-aachen/carlos?style=social"/></a> 
+>
+> Here, it is the component that facilitates the powerful combination of CARLA and ROS. The component retrieves data from the simulation to publish it over ROS topics while simultaneously listening on different topics for requested actions, which are translated to commands to be executed in CARLA. It does this by using both the ROS communication standard DDS, as well as RPC via the CARLA Python API, in tandem, effectively bridging the two.
+
+> [!TIP]
+> Please also have look to the ROS specific [README](./docker/README.md) giving detailed insights about available ROS nodes, topics and services but also useful information about the containerization. Here, [docker-ros](https://github.com/ika-rwth-aachen/docker-ros) enables a continual building of container images with recent versions of ROS, Python, and Ubuntu.
+
+> [!NOTE]
+> We set up a Continous Integration (CI) pipeline as [GitHub workflow](./github/workflows/docker.yml) to continously build Docker images for the `carla-ros-bridge`, publicly available on [Docker Hub](https://hub.docker.com/r/rwthika/carla-ros-bridge).
 
 ---
 ---
