@@ -16,13 +16,13 @@
 > [!TIP]
 > We recommend to use the *carla-ros-bridge* as **communication actor** in our open, modular and scalable simulation framework <a href="https://github.com/ika-rwth-aachen/carlos">**CARLOS**. <img src="https://img.shields.io/github/stars/ika-rwth-aachen/carlos?style=social"/></a> 
 >
-> Here, it is the component that facilitates the powerful combination of CARLA and ROS. The component retrieves data from the simulation to publish it over ROS topics while simultaneously listening on different topics for requested actions, which are translated to commands to be executed in CARLA. It does this by using both the ROS communication standard DDS, as well as RPC via the CARLA Python API, in tandem, effectively bridging the two. Here, [docker-ros](https://github.com/ika-rwth-aachen/docker-ros) enables a continual building of container images with recent versions of ROS, Python, and Ubuntu. 
+> Here, it is the component that facilitates the powerful combination of CARLA and ROS. The component retrieves data from the simulation to publish it over ROS topics while simultaneously listening on different topics for requested actions, which are translated to commands to be executed in CARLA. It does this by using both the ROS communication standard DDS, as well as RPC via the CARLA Python API, in tandem, effectively bridging the two.
 
 > [!TIP]
-> Please also have look to the ROS specific [README](./docker/README.md) giving detailed insights about available ROS nodes, topics and services but also useful information about the containerization.
+> Please also have look to the ROS specific [README](./docker/README.md) giving detailed insights about available ROS nodes, topics and services but also useful information about the containerization. Here, [docker-ros](https://github.com/ika-rwth-aachen/docker-ros) enables a continual building of container images with recent versions of ROS, Python, and Ubuntu.
 
 > [!NOTE]
-> We set up a Continous Integration (CI) pipeline as [GitHub action](./github/workflows/docker.yml) to continously build Docker images for the `carla-ros-bridge`, publicly available on [Docker Hub](https://hub.docker.com/r/rwthika/carla-ros-bridge).
+> We set up a Continous Integration (CI) pipeline as [GitHub workflow](./github/workflows/docker.yml) to continously build Docker images for the `carla-ros-bridge`, publicly available on [Docker Hub](https://hub.docker.com/r/rwthika/carla-ros-bridge).
 
 ---
 ---
