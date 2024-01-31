@@ -33,7 +33,7 @@ jobs:
       - name: Remove PythonAPI.tar.gz
         run: rm docker/additional-files/PythonAPI.tar.gz
 
-      - uses: ika-rwth-aachen/docker-ros@main   # fix to @v1.4.0 when released
+      - uses: ika-rwth-aachen/docker-ros@v1.4.0
         name: Run docker-ros pipeline
         with:
           base-image: rwthika/ros2:humble
