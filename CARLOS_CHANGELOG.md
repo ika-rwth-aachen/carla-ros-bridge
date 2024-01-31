@@ -4,7 +4,7 @@
 
 ### Major changes
 
-*   Created GitHub workflow to automatically build Docker images using [docker-ros](https://github.com/ika-rwth-aachen/docker-ros) (supports Noetic and Humble distribution)
+*   Created GitHub workflow to automatically build Docker images using [docker-ros](https://github.com/ika-rwth-aachen/docker-ros) (supports ROS 2 Humble distribution)
 *   Update to [CARLA 0.9.15](https://carla.org/2023/11/10/release-0.9.15/)
 *   Update to Ubuntu 22.04 and Python 3.10 including corresponding pip versions
 
