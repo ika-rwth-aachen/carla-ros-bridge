@@ -33,7 +33,7 @@ jobs:
       - name: Remove PythonAPI.tar.gz
         run: rm docker/additional-files/PythonAPI.tar.gz
 
-      - uses: ika-rwth-aachen/docker-ros@v1.4.0
+      - uses: ika-rwth-aachen/docker-ros@v1.8.1
         name: Run docker-ros pipeline
         with:
           base-image: rwthika/ros2:humble
@@ -44,6 +44,6 @@ jobs:
           registry-user: ${{ secrets.DOCKER_USERNAME }}
           registry-password: ${{ secrets.DOCKER_PASSWORD }}
           image-name: rwthika/carla-ros-bridge
-          image-tag: ros2
-          enable-push-as-latest: true
+          image-tag: 0.9.15
+          enable-push-as-latest: false
           enable-checkout: false
