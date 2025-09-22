@@ -1,6 +1,20 @@
-## Latest : 1.0.0
+## Latest : v0.9.16
 
-## 1.0.0 - Initial Release
+## v0.9.16 – Update to CARLA 0.9.16
+
+### Major changes
+
+*   Update to CARLA 0.9.16 (synchronize internal `CARLA_VERSION`)
+*   Switch default Docker base image to ROS 2 Jazzy in CI builds
+
+### Minor changes
+
+*   Pin PythonAPI artifact download to CARLA v0.9.16 for reproducible builds
+*   Bump `actions/checkout` to v5
+*   Upgrade Docker pipeline to `ika-rwth-aachen/docker-ros@v1.8.1`
+*   Small CI and workflow cleanups related to the version update
+
+## v0.9.15 – Initial Release
 
 ### Major changes
 

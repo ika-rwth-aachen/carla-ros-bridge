@@ -5,9 +5,9 @@
   <img src="https://img.shields.io/github/license/ika-rwth-aachen/carla-ros-bridge"/>
   <a href="https://github.com/ika-rwth-aachen/carla-ros-bridge/actions/workflows/docker.yml">
   <img src="https://github.com/ika-rwth-aachen/carla-ros-bridge/actions/workflows/docker.yml/badge.svg"/></a>
-  <img src="https://img.shields.io/badge/Ubuntu-22.04-E95420"/>
-  <img src="https://img.shields.io/badge/ROS 2-humble-blueviolet"/>
-  <img src="https://img.shields.io/badge/Python-3.10-blueviolet"/>
+  <img src="https://img.shields.io/badge/Ubuntu-24.04-E95420"/>
+  <img src="https://img.shields.io/badge/ROS 2-jazzy-blueviolet"/>
+  <img src="https://img.shields.io/badge/Python-3.12-blueviolet"/>
   <img src="https://img.shields.io/github/stars/ika-rwth-aachen/carla-ros-bridge?style=social"/>
 </p>
 

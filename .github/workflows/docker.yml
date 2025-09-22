@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: clean-up
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         name: Checkout repository
         with:
           submodules: true
@@ -25,7 +25,7 @@ jobs:
         name: Download PythonAPI
         with:
           repository: carla-compose/carla-simulator
-          tag: v0.9.15
+          tag: v0.9.16
           fileName: PythonAPI.tar.gz
           extract: true
           out-file-path: docker/additional-files
@@ -36,7 +36,7 @@ jobs:
       - uses: ika-rwth-aachen/docker-ros@v1.8.1
         name: Run docker-ros pipeline
         with:
-          base-image: rwthika/ros2:humble
+          base-image: rwthika/ros2:jazzy
           command: ros2 launch carla_ros_bridge carla_ros_bridge.launch.py
           target: run
           platform: amd64
