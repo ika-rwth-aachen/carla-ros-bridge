@@ -1,4 +1,4 @@
-apt-get install --no-install-recommends-y \
+apt-get install -y --no-install-recommends \
     libpng16-16 \
     libtiff6 \
     libjpeg8 \
