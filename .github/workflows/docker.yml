@@ -44,7 +44,7 @@ jobs:
           registry-user: ${{ secrets.DOCKER_USERNAME }}
           registry-password: ${{ secrets.DOCKER_PASSWORD }}
           image-name: rwthika/carla-ros-bridge
-          image-tag: 0.9.15
-          enable-push-as-latest: false
+          image-tag: 0.9.16
+          enable-push-as-latest: true
           enable-checkout: false
           enable-slim: false
