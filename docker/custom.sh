@@ -1,18 +1,5 @@
 export DOCKER_ROS_FILES_PATH=/docker-ros/additional-files
-# Install ROS version dependent apt packages
-if [ "$ROS_DISTRO" = "noetic" ]; then
-  ADDITIONAL_PACKAGES="ros-$ROS_DISTRO-rviz
-  ros-$ROS_DISTRO-opencv-apps
-  ros-$ROS_DISTRO-rospy
-  ros-$ROS_DISTRO-rospy-message-converter
-  ros-$ROS_DISTRO-pcl-ros
-  python3-catkin-tools
-  python3-catkin-pkg
-  python3-catkin-pkg-modules"
-else
-  ADDITIONAL_PACKAGES="ros-$ROS_DISTRO-rviz2"
-fi
-apt-get install --no-install-recommends -y $ADDITIONAL_PACKAGES
+
 # Check if user provided CARLA PythonAPI. If not, exit
 mkdir -p /opt/carla
 if [ -d "$DOCKER_ROS_FILES_PATH/artifacts/PythonAPI" ]; then
