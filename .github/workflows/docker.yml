@@ -47,3 +47,4 @@ jobs:
           image-tag: 0.9.15
           enable-push-as-latest: false
           enable-checkout: false
+          enable-slim: false
