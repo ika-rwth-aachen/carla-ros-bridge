@@ -1,7 +1,6 @@
 python3-pip
 python3-osrf-pycommon
 python3-rosdep
-python3-wstool
 python3-opencv
 ros-$ROS_DISTRO-ackermann-msgs
 ros-$ROS_DISTRO-cv-bridge

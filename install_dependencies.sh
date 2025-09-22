@@ -31,7 +31,6 @@ sudo apt-get install --no-install-recommends -y \
     python$PYTHON_SUFFIX-catkin-pkg \
     python$PYTHON_SUFFIX-catkin-pkg-modules \
     python$PYTHON_SUFFIX-rosdep \
-    python$PYTHON_SUFFIX-wstool \
     python$PYTHON_SUFFIX-opencv \
     ros-$ROS_DISTRO-ackermann-msgs \
     ros-$ROS_DISTRO-derived-object-msgs \
