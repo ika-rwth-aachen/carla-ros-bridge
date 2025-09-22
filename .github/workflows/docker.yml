@@ -25,7 +25,7 @@ jobs:
         name: Download PythonAPI
         with:
           repository: carla-compose/carla-simulator
-          latest: true
+          tag: v0.9.15
           fileName: PythonAPI.tar.gz
           extract: true
           out-file-path: docker/additional-files
